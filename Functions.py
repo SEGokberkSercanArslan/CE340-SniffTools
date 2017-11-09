@@ -5,6 +5,7 @@ from scapy.layers.inet import TCP,IP,ICMP
 import sys
 
 
+
 def ICMP_ECHO_Prototype():
     first_input  = input("Please input 1 for searching web address or specific ip address and 2 for local network :")
     icmpfile = open("icmp.dat",'a')
@@ -39,5 +40,43 @@ def ICMP_ECHO_Prototype():
                 print("Not Online : 192.168.1."+str(i))
         return address_data
 
+#port id func
+#open port id func
 
-ICMP_ECHO_Prototype()
+'''
+def OS_fingerprint():
+
+# nmap -v -O --osscan-guess <IP addr>
+#
+
+def firewall_detection():
+#scan&find(???) nearby routers & firewalls
+#possibly by using nmap host discovery again;
+
+#save to wall.dat file
+
+def web_server_detection():
+# ??? unsure what exactly this is supposed to do
+#possibly ommit this out and implement SYN-flood instead
+'''
+
+def show():
+
+    filename[] = input("Which file(s)? Seperate files by blank-space,"
+                       "available files are: ")
+    #list out current files ???
+
+    items = len(filename)
+    for i in range(0,items)
+        #if-elif block       decide on functions!
+        if filename[i]=="icmp":
+            #open icmp.dat, print out contents
+            
+        elif filename[i]=="ports":
+            
+        elif filename[i]=="open-ports":
+
+        elif filename[i]=="wall":
+
+        elif filename[i]=="snmp":
+
