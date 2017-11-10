@@ -3,6 +3,8 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 from scapy.layers.inet import TCP,IP,ICMP
 import sys
+import queue
+import threading
 
 
 
@@ -40,43 +42,32 @@ def ICMP_ECHO_Prototype():
                 print("Not Online : 192.168.1."+str(i))
         return address_data
 
-#port id func
-#open port id func
 
-'''
-def OS_fingerprint():
+def PORT_SCAN_Prototype():
+    icmpfile = open("icmp.dat","r")
+    onlinehosts = []
+    getip = []
 
-# nmap -v -O --osscan-guess <IP addr>
-#
+    "Collect ip addresses from file"
+    with open("icmp.dat") as icmpdatafile:
+        for line in icmpdatafile.readlines():
+            getip.append(line.split("\n",))
+    for i in range(len(getip)):
+        onlinehosts.append(getip[i][0])
 
-def firewall_detection():
-#scan&find(???) nearby routers & firewalls
-#possibly by using nmap host discovery again;
 
-#save to wall.dat file
 
-def web_server_detection():
-# ??? unsure what exactly this is supposed to do
-#possibly ommit this out and implement SYN-flood instead
-'''
+"""
+def thread_port_scan_function(ip):
+    ports = range(1024)
+    for port in ports:
+        src_port = RandShort()
+        packet = IP(dst=ip)/TCP(sport=src_port, dport=port, flags='S')
+        response = sr1(packet,timeout=1)
+        if response:
+            if response[TCP].flags == 18:
+                print("Port open")
+"""
 
-def show():
-
-    filename[] = input("Which file(s)? Seperate files by blank-space,"
-                       "available files are: ")
-    #list out current files ???
-
-    items = len(filename)
-    for i in range(0,items)
-        #if-elif block       decide on functions!
-        if filename[i]=="icmp":
-            #open icmp.dat, print out contents
-            
-        elif filename[i]=="ports":
-            
-        elif filename[i]=="open-ports":
-
-        elif filename[i]=="wall":
-
-        elif filename[i]=="snmp":
-
+thread_port_scan_function("212.101.122.35")
+#PORT_SCAN_Prototype()

@@ -1,6 +1,6 @@
 
+import sys
 
-import Functions
 
 print("Welcome to Scapy Tool")
 
@@ -20,28 +20,31 @@ while True:
     choice = input("Your choice :")
 
     if choice=="icmp":
-        ICMP_ECHO_Prototype()
-
+      #  ICMP_ECHO_Prototype()
+        pass
     elif choice == "port-id":
         #func
+        pass
     elif choice == "open-port-id":
         #func
+        pass
     elif choice == "OS-id":
-        OS_fingerprint()
-
+      #  OS_fingerprint()
+        pass
     elif choice == "firewall":
-        firewall_detection()
-
+       # firewall_detection()
+        pass
     elif choice == "snmp-detec":
-
+        pass
     elif choice == "syn-flood":
-
+        pass
     elif choice == "show":
-        show()
+        pass
+        #show()
 
     elif choice =="exit":
-        break
-    else
+        sys.exit(True)
+    else:
         print("Invalid request."
               "Please type in a function or 'exit' to stop the program.")
 
