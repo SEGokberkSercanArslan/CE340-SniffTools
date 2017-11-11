@@ -1,0 +1,57 @@
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+216.58.214.227;www.google.com.tr;user;tcp;25;smtp;closed;;;conn-refused;;3;
+216.58.214.227;bud02s24-in-f227.1e100.net;PTR;tcp;25;smtp;closed;;;conn-refused;;3;
+216.58.214.227;www.google.com.tr;user;tcp;80;http;open;gws;;syn-ack;;10;
+216.58.214.227;bud02s24-in-f227.1e100.net;PTR;tcp;80;http;open;gws;;syn-ack;;10;
+216.58.214.227;www.google.com.tr;user;tcp;443;https;open;gws;;syn-ack;;10;
+216.58.214.227;bud02s24-in-f227.1e100.net;PTR;tcp;443;https;open;gws;;syn-ack;;10;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+212.101.122.35;www.mynet.com.tr;user;tcp;0;;filtered;;;no-response;;;
+212.101.122.35;www.mynet.com.tr;user;tcp;25;smtp;filtered;;;no-response;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;80;http;open;;;syn-ack;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;81;hosts2-ns;filtered;;;no-response;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;82;xfer;filtered;;;no-response;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;83;mit-ml-dev;filtered;;;no-response;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;443;https;open;;;syn-ack;;3;
+212.101.122.35;www.mynet.com.tr;user;tcp;968;unknown;filtered;;;no-response;;3;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+46.253.112.23;www.kraloyun.com;user;tcp;80;http;open;Apache httpd;(Debian) OpenSSL/1.0.1t;syn-ack;2.4.10;10;cpe:/a:apache:http_server:2.4.10
+46.253.112.23;www.kraloyun.com;user;tcp;443;http;open;Apache httpd;(Debian) OpenSSL/1.0.1t;syn-ack;2.4.10;10;cpe:/a:apache:http_server:2.4.10
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+91.191.172.242;www.oyunskor.com;user;tcp;0;;filtered;;;no-response;;;
+91.191.172.242;www.oyunskor.com;user;tcp;22;ssh;open;OpenSSH;protocol 2.0;syn-ack;5.3;10;cpe:/a:openbsd:openssh:5.3
+91.191.172.242;www.oyunskor.com;user;tcp;25;smtp;filtered;;;no-response;;3;
+91.191.172.242;www.oyunskor.com;user;tcp;80;http;open;LiteSpeed httpd;;syn-ack;;10;
+91.191.172.242;www.oyunskor.com;user;tcp;81;hosts2-ns;filtered;;;no-response;;3;
+91.191.172.242;www.oyunskor.com;user;tcp;82;xfer;filtered;;;no-response;;3;
+91.191.172.242;www.oyunskor.com;user;tcp;83;mit-ml-dev;filtered;;;no-response;;3;
+91.191.172.242;www.oyunskor.com;user;tcp;443;https;filtered;;;no-response;;3;
+91.191.172.242;www.oyunskor.com;user;tcp;968;unknown;filtered;;;no-response;;3;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+176.53.43.30;www.eksisozluk.com;user;tcp;80;http;open;nginx;;syn-ack;;10;cpe:/a:igor_sysoev:nginx
+176.53.43.30;server-176.53.43.30.as42926.net;PTR;tcp;80;http;open;nginx;;syn-ack;;10;cpe:/a:igor_sysoev:nginx
+176.53.43.30;www.eksisozluk.com;user;tcp;443;http;open;nginx;;syn-ack;;10;cpe:/a:igor_sysoev:nginx
+176.53.43.30;server-176.53.43.30.as42926.net;PTR;tcp;443;http;open;nginx;;syn-ack;;10;cpe:/a:igor_sysoev:nginx
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+92.45.106.101;www.haberturk.com;user;tcp;80;tcpwrapped;open;;;syn-ack;;8;
+92.45.106.101;host-92-45-106-101.reverse.superonline.net;PTR;tcp;80;tcpwrapped;open;;;syn-ack;;8;
+92.45.106.101;www.haberturk.com;user;tcp;443;tcpwrapped;open;;;syn-ack;;8;
+92.45.106.101;host-92-45-106-101.reverse.superonline.net;PTR;tcp;443;tcpwrapped;open;;;syn-ack;;8;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+172.217.17.174;www.youtube.com;user;tcp;80;http;open;gws;;syn-ack;;10;
+172.217.17.174;sof02s21-in-f174.1e100.net;PTR;tcp;80;http;open;gws;;syn-ack;;10;
+172.217.17.174;www.youtube.com;user;tcp;443;https;open;gws;;syn-ack;;10;
+172.217.17.174;sof02s21-in-f174.1e100.net;PTR;tcp;443;https;open;gws;;syn-ack;;10;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+157.240.20.35;www.facebook.com;user;tcp;80;http;open;;;syn-ack;;10;
+157.240.20.35;edge-star-mini-shv-02-frt3.facebook.com;PTR;tcp;80;http;open;;;syn-ack;;10;
+157.240.20.35;www.facebook.com;user;tcp;443;https;open;;;syn-ack;;10;
+157.240.20.35;edge-star-mini-shv-02-frt3.facebook.com;PTR;tcp;443;https;open;;;syn-ack;;10;
+157.240.20.35;www.facebook.com;user;tcp;843;adobe-crossdomain;open;Facebook cross-domain policy;;syn-ack;;10;
+157.240.20.35;edge-star-mini-shv-02-frt3.facebook.com;PTR;tcp;843;adobe-crossdomain;open;Facebook cross-domain policy;;syn-ack;;10;
+host;hostname;hostname_type;protocol;port;name;state;product;extrainfo;reason;version;conf;cpe
+157.56.198.220;www.live.com;user;tcp;80;http;open;Microsoft IIS httpd;;syn-ack;7.5;10;cpe:/o:microsoft:windows
+157.56.198.220;origin.du131w.dub131.mail.live.com;PTR;tcp;80;http;open;Microsoft IIS httpd;;syn-ack;7.5;10;cpe:/o:microsoft:windows
+157.56.198.220;www.live.com;user;tcp;443;http;open;Microsoft IIS httpd;;syn-ack;7.5;10;cpe:/o:microsoft:windows
+157.56.198.220;origin.du131w.dub131.mail.live.com;PTR;tcp;443;http;open;Microsoft IIS httpd;;syn-ack;7.5;10;cpe:/o:microsoft:windows
