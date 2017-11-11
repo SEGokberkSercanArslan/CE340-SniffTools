@@ -49,38 +49,38 @@ class PortScanner():
         file.write("{}\n".format(self.target))
         file.close()
         self.run()
+        self.isOpen()
 
     def isOpen(self):
 
-        isOpenFile = open("open_ports.dat", "a")
-        isOpenFile.write("{}\n".format(self.target))
 
         "Read Ports an Source IP"
-        counter = 0
         getports = []
         openports = []
-        searchportset = []
+
 
         with open("ports.dat","r") as portsdatafile:
             for line in portsdatafile.readlines():
                 getports.append(line.split("\n", ))
         for i in range(len(getports)):
             openports.append(getports[i][0])
+
+
         for i in range(len(openports)):
+            file = open("open_ports.dat", "a")
             if len(openports[i])>5:
-                searchportset[counter].append(openports[i])
-                counter+=1
-            else:
-                searchportset[counter-1].append(openports[i])
-        print(searchportset)
-
-
-        isOpenSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        result = isOpenSocket.connect_ex((self.target,80))
-        if result == 0:
-            print("Port is open")
-        else:
-            print("Port Closed")
+                print("IP:{}".format(openports[i]))
+                self.target = openports[i]
+                file.write("{}\n".format(self.target))
+            else :
+                isOpenSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+                result = isOpenSocket.connect_ex((self.target,int(openports[i])))
+                if result == 0:
+                    file.write("{}\n".format(openports[i]))
+                    print("IP:{} and Port:{} is open".format(self.target,openports[i]))
+                else:
+                    print("IP:{} and Port:{} is close".format(self.target,openports[i]))
+            file.close()
 
 sc = PortScanner()
 #sc.setTargetAndRun("46.253.112.23")
