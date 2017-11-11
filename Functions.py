@@ -56,18 +56,3 @@ def PORT_SCAN_Prototype():
         onlinehosts.append(getip[i][0])
 
 
-
-"""
-def thread_port_scan_function(ip):
-    ports = range(1024)
-    for port in ports:
-        src_port = RandShort()
-        packet = IP(dst=ip)/TCP(sport=src_port, dport=port, flags='S')
-        response = sr1(packet,timeout=1)
-        if response:
-            if response[TCP].flags == 18:
-                print("Port open")
-"""
-
-thread_port_scan_function("212.101.122.35")
-#PORT_SCAN_Prototype()

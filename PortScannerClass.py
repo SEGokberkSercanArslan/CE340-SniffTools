@@ -9,10 +9,9 @@ print_lock = threading.Lock()
 
 class PortScanner():
     def __init__(self):
-        self.target = None
+        self.target = "46.253.112.23"
         self.scannerQueue = Queue()
-        self.file = open("ports.dat","a")
-        self.file.write("{}\n".format(self.target))
+
 
     def threadWorker(self):
         while True:
@@ -26,8 +25,9 @@ class PortScanner():
             con = s.connect((self.target, port))
             with print_lock:
                 print("port {} is open".format(port))
-                self.file.writelines("{}".format(port))
-
+                file = open("ports.dat","a")
+                file.write("{}\n".format(port))
+                file.close()
         except:
             pass
 
@@ -38,17 +38,43 @@ class PortScanner():
             t.daemon = True
             t.start()
 
-        for worker in range(1, 500):
+        for worker in range(1,500):
             self.scannerQueue.put(worker)
 
         self.scannerQueue.join()
 
     def setTargetAndRun(self,ip):
         self.target=ip
-        self.file.writelines("{}\n".format(self.target))
+        file = open("ports.dat","a")
+        file.write("{}\n".format(self.target))
+        file.close()
         self.run()
 
     def isOpen(self):
+
+        isOpenFile = open("open_ports.dat", "a")
+        isOpenFile.write("{}\n".format(self.target))
+
+        "Read Ports an Source IP"
+        counter = 0
+        getports = []
+        openports = []
+        searchportset = []
+
+        with open("ports.dat","r") as portsdatafile:
+            for line in portsdatafile.readlines():
+                getports.append(line.split("\n", ))
+        for i in range(len(getports)):
+            openports.append(getports[i][0])
+        for i in range(len(openports)):
+            if len(openports[i])>5:
+                searchportset[counter].append(openports[i])
+                counter+=1
+            else:
+                searchportset[counter-1].append(openports[i])
+        print(searchportset)
+
+
         isOpenSocket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         result = isOpenSocket.connect_ex((self.target,80))
         if result == 0:
@@ -57,5 +83,5 @@ class PortScanner():
             print("Port Closed")
 
 sc = PortScanner()
-sc.setTargetAndRun("46.253.112.23")
+#sc.setTargetAndRun("46.253.112.23")
 sc.isOpen()
