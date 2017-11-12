@@ -82,6 +82,8 @@ class PortScanner():
                     print("IP:{} and Port:{} is close".format(self.target,openports[i]))
             file.close()
 
+'''
 sc = PortScanner()
 #sc.setTargetAndRun("46.253.112.23")
 sc.isOpen()
+'''

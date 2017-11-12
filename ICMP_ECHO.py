@@ -41,6 +41,6 @@ class ICMP_ECHO():
                     print("Not Online : 192.168.1." + str(i))
             return address_data
 
-
-ıcmp = ICMP_ECHO()
-ıcmp.icmp_prototype()
+'''
+icmp = ICMP_ECHO()
+icmp.icmp_prototype()'''

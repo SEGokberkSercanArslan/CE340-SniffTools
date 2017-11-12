@@ -36,6 +36,7 @@ class OsDetection:
         for i in range(len(iplist)):
             nm.scan("{}".format(iplist[i]),"0-1024")
             print(nm.csv())
-
+'''
 os = OsDetection()
 os.OsDetection()
+'''

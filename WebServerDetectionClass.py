@@ -20,5 +20,7 @@ class WebServerDetection():
             print(self.nm.csv())
             file.writelines(self.nm.csv())
 
+'''
 wsd = WebServerDetection()
 wsd.webServerDetection()
+'''
