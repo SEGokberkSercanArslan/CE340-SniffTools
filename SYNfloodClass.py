@@ -1,4 +1,5 @@
 from scapy.all import *
+from scapy.layers.inet import *
 
 class SynFlood():
     def __init__(self):

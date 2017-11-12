@@ -1,11 +1,11 @@
 
 import sys
 import ICMP_ECHO
-import PortScannerClass
-import OsDetectionClass
-import WebServerDetectionClass
-import ShowClass
-import SYNfloodClass
+from PortScannerClass import *
+from OsDetectionClass import *
+from WebServerDetectionClass import *
+from ShowClass import *
+from SYNfloodClass import *
 
 print("Welcome to Scapy Tool")
 
