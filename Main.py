@@ -1,11 +1,11 @@
 
 import sys
-import ICMP_ECHO
+from ICMP_ECHO import *
 from PortScannerClass import *
 from OsDetectionClass import *
 from WebServerDetectionClass import *
 from ShowClass import *
-from SYNfloodClass import *
+from SynFlood import *
 
 print("Welcome to Scapy Tool")
 
@@ -49,8 +49,8 @@ while True:
         wsd.webServerDetection()
 
     elif choice == "syn-flood":
-        syn = SynFlood()
-        syn.flood()
+        syn = SynFlooadAttacker()
+        syn.attack()
 
     elif choice == "show":
         s = Show()

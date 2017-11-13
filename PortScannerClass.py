@@ -33,12 +33,12 @@ class PortScanner():
 
     def run(self):
 
-        for x in range(500):
+        for x in range(1000):
             t = threading.Thread(target=self.threadWorker)
             t.daemon = True
             t.start()
 
-        for worker in range(1,500):
+        for worker in range(1,65535):
             self.scannerQueue.put(worker)
 
         self.scannerQueue.join()

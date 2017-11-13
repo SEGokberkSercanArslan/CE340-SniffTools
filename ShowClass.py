@@ -22,25 +22,36 @@ class Show():
                 file.close()
 
             elif filename[i] == "ports":
-                file = open("ports.dat")
-                line = file.readline()
-                while line != "":
-                    if "." in line:
-                        print("IP: ", line, " port(s) :")
-                    line = file.readline()
-                    print(line)
-                file.close()
+                openports = []
+                getports = []
+
+                with open("ports.dat", "r") as webdatafile:
+                    for line in webdatafile.readlines():
+                        getports.append(line.split("\n", ))
+                for i in range(len(getports)):
+                    openports.append(getports[i][0])
+
+                for i in range(len(openports)):
+                    if len(openports[i]) > 6:
+                        print("IP : {}".format(openports[i]))
+                    else:
+                        print("Open Port: {}".format(openports[i]))
 
             elif filename[i] == "open-ports":
-                file = open("open_ports.dat")
-                line = file.readline()
-                while line != "":
-                    if "." in line:
-                        print("IP: ", line, " port(s) :")
-                    line = file.readline()
-                    print(line)
-                file.close()
+                openports=[]
+                getports=[]
 
+                with open("open_ports.dat", "r") as webdatafile:
+                    for line in webdatafile.readlines():
+                        getports.append(line.split("\n", ))
+                for i in range(len(getports)):
+                    openports.append(getports[i][0])
+
+                for i in range(len(openports)):
+                    if len(openports[i])>6:
+                        print("IP : {}".format(openports[i]))
+                    else :
+                        print("Open Port: {}".format(openports[i]))
 
             elif filename[i] == "web":
 
@@ -57,5 +68,5 @@ class Show():
                     print(openports[i]+"*\n")
 
 
-s = Show()
-s.showfiles()
+#s = Show()
+#s.showfiles()
