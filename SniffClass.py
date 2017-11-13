@@ -30,29 +30,40 @@ class SniffNetwork():
         self.portRange = input("Please input port range like 0-81 with (-): ")
 
     def setScripts(self):
-        if self.source != "none" or "None":
-            self.sourceScript = "src host {} and".format(self.source)
-        else:
+
+        if self.source is "none" or "None":
             self.sourceScript = "192.168.1.1"
-        if self.target != "none" or "None":
-            self.targetScript = "dst host {} and".format(self.target)
         else:
+            self.sourceScript = "src host {} and".format(self.source)
+
+        if self.target is "none" or "None":
+
             self.targetScript = ""
-        if self.srcPort != "none" or "None":
-            self.srcPortScript = "src port {} and".format(self.srcPort)
         else:
+            self.targetScript = "dst host {} and".format(self.target)
+
+        if self.srcPort is "none" or "None":
             self.srcPortScript = ""
-        if self.dstPort != "none" or "None":
-            self.dstPortScript = "dst port {} and".format(self.dstPort)
-        else: self.dstPortScript = ""
-        if self.portRange != "none" or "None":
-            self.portRangeScript = "portrange {}".format(self.portRange)
         else:
+            self.srcPortScript = "src port {} and".format(self.srcPort)
+
+        if self.dstPort is "none" or "None":
+            self.dstPortScript = ""
+        else:
+            self.dstPortScript = "dst port {} and".format(self.dstPort)
+
+        if self.portRange is "none" or "None":
             self.portRangeScript = ""
+        else:
+            self.portRangeScript = "portrange {}".format(self.portRange)
 
     def sniffNetwork(self):
         self.getInputs()
         self.setScripts()
+
+        print(self.target)
+        print(self.targetScript)
+
         try:
             p = sub.Popen(('sudo', 'tcpdump', "{} {} {} {} {}".format(self.sourceScript,self.targetScript,self.srcPortScript
             ,self.dstPortScript,self.portRangeScript), '-l'), stdout=sub.PIPE)
