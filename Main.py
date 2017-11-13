@@ -19,7 +19,7 @@ print("""
       [open-ports] : Scan valid live hosts, find open ports from each host and save the results. 
             Again, uses the file created by [icmp]. 
       [OSdetection] : Identify operating systems (OS) and OS versions of the hosts with open ports. 
-            This service uses the file created by [open-port-id]. 
+            This service uses the file created by [open-ports]. 
       [web] : Scan and find 10 web-server addresses, protocols, and ports of each web server. Save the result. 
       [syn-flood] : Launch SYN-flood attack to a given destination (IP) and port(s). 
       [show] : Display the results files created so far. \n
@@ -35,7 +35,7 @@ while True:
 
     elif choice == "ports":
         sc = PortScanner()
-        sc.isOpen()
+        sc.run()
 
     elif choice == "open-ports":
         sc = PortScanner()
