@@ -1,0 +1,25 @@
+
+Scapy Tool for CE 340 Homework#3
+Made by Gökberk Sercan ARSLAN and Selin CANDEMİR.
+
+Welcome to Scapy Tool.
+
+To use this program, run main.py .
+
+As you run main.py, a brief explanation of the services provided will be printed out
+into the terminal as the first thing.
+
+To use a service, type the word in the brackets [] verbatim.
+ example: OSdetection
+
+Each service will take necessary inputs from user, after you have chosen a service.
+
+For [icmp]: Input 1 for single IP; 2 for range of IP, then spacify lower and upper bounds.
+For [ports]: No input needed, but run [icmp] before running this service.
+For [open-ports]: No input needed, but run [icmp] and [ports] before running this service.
+For [OSdetection]: No input needed, but run [icmp] before running this service.
+For [web]: Input 10 web addresses to check if they are online.
+For [syn-flood]: Input target IP, then ports, then how many times you want to attack (# of packets).
+For [show]: Input which file you want to see.
+
+Best regards.
