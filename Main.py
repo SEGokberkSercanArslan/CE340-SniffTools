@@ -8,6 +8,7 @@ from ShowClass import *
 from SynFlood import *
 
 print("Welcome to Scapy Tool")
+print("The tool was created by Gökberk Sercan Arslan and Selin Candemir")
 
 # brief documentation of each 7 functions
 print("""
