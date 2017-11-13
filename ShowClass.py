@@ -43,24 +43,18 @@ class Show():
 
 
             elif filename[i] == "web":
-                file = open("web.dat")
-                line = file.readline()
-                while line != "":
-                    if line == "host;hostname;hostname_type;protocol;port;name;state;" \
-                               "product;extrainfo;reason;version;conf;cpe":
-                        line = file.readline()
 
-                        while line != "host;hostname;hostname_type;protocol;port;name;state;" \
-                                      "product;extrainfo;reason;version;conf;cpe":
-                            print("\n")
-                            current = line.split(";")
-                            print("host: ", current[0], " hostname: ", current[1], "hostname type: ", current[2],
-                                  "protocol: ", current[3], "port: ", current[4], "name: ", current[5], "state: ",
-                                  current[6], "product: ", current[7], "extra info: ", current[8], "reason: ",
-                                  current[9], "version: ", current[10], "conf: ", current[11], "cpe: ", current[12],
-                                  "\n")
-                            line = file.readline()
-                file.close()
+                getports=[]
+                openports=[]
+
+                with open("web.dat", "r") as webdatafile:
+                    for line in webdatafile.readlines():
+                        getports.append(line.split("\n", ))
+                for i in range(len(getports)):
+                    openports.append(getports[i][0])
+
+                for i in range(len(openports)):
+                    print(openports[i]+"*\n")
 
 
 s = Show()
