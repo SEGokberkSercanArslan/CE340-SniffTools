@@ -4,6 +4,8 @@ Made by Gökberk Sercan ARSLAN and Selin CANDEMİR.
 
 Welcome to Scapy Tool.
 
+Please make sure you have Python (2.7 or higher), scapy and nmap installed on your computer.
+
 To use this program, run main.py .
 
 As you run main.py, a brief explanation of the services provided will be printed out
