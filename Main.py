@@ -5,6 +5,7 @@ from PortScannerClass import *
 from OsDetectionClass import *
 from WebServerDetectionClass import *
 from ShowClass import *
+from SniffNetworkPrototype import *
 from SynFlood import *
 
 print("Welcome to Scapy Tool")
@@ -21,7 +22,8 @@ print("""
       [OSdetection] : Identify operating systems (OS) and OS versions of the hosts with open ports. 
             This service uses the file created by [open-ports]. 
       [web] : Scan and find 10 web-server addresses, protocols, and ports of each web server. Save the result. 
-      [syn-flood] : Launch SYN-flood attack to a given destination (IP) and port(s). 
+      [syn-flood] : Launch SYN-flood attack to a given destination (IP) and port(s).
+       [sniff] : The tool provides to listen network given filter configuration.
       [show] : Display the results files created so far. \n
       """)
 
@@ -56,6 +58,10 @@ while True:
     elif choice == "show":
         s = Show()
         s.showfiles()
+
+    elif choice == "sniff":
+        snf = SniffNetworkPrototype()
+        snf.sniff()
 
     elif choice == "exit":
         sys.exit(True)
