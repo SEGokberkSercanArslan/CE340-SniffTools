@@ -18,5 +18,5 @@ class SniffNetworkPrototype():
         except KeyboardInterrupt:
             print("Process Stopped Because Keyboard Interrupt")
 
-ok = SniffNetworkPrototype()
-ok.sniff()
+#ok = SniffNetworkPrototype()
+#ok.sniff()
